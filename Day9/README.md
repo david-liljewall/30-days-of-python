@@ -1,0 +1,1 @@
+# Welcome to day 9 of the 30 Days of Python series! Today we're going to look at a really useful iteration technique called unpacking. We're also going to be exploring a couple of new functions: enumerate and zip

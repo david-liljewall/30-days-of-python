@@ -1,0 +1,1 @@
+# Welcome to day 3 of the 30 Days of Python series! In this post we’re going to be talking about concatenating strings (joining strings together), string interpolation (putting values inside strings), and processing user input. We’re also going to talk about how we can better document our code using comments

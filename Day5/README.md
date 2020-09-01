@@ -1,0 +1,1 @@
+# Welcome to day 5 of the 30 Days of Python series! In this post we're going to be talking about conditionals. This is a big step forward in our programming journey, because we're going to be able to make decisions in our programs for the first time
