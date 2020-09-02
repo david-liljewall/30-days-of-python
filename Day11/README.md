@@ -1,0 +1,1 @@
+# Welcome to day 11 of the 30 Days of Python series! In this post we're going to be talking about yet another collection type called sets. Sets are extremely useful for comparing collections of values, and are highly optimised for this kind of operation
