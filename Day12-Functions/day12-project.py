@@ -41,10 +41,13 @@ def add_book( reading_list=list ):
 def display_book_list( reading_list=list ):
     print( "\n\n" ) # extra whitespace
     
-    # Iterate through reading_list, print in a readable format
+    # Iterate through reading_list in a readable format:
     for book in reading_list:
-        for key, value in book.items():
-            print( f"   {key} --> {value}" )
+        title, author, release_year = book.values()
+        print( f"{title}, by {author} ({release_year})" )
+        
+    # EXTRA: iterate through reading list using the key, value method
+    
 
 
 
@@ -56,7 +59,6 @@ book_list = []
 menu_option = ""
 # Menu Loop:
 while True:
-
     print( "\n\n" ) # extra whitespace
 
     print( "Please select from the options below:" )
