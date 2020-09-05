@@ -94,5 +94,22 @@ for row in iris_data[1:]:
 	iris = row.strip().split(",") # create list where each element is an element from 1 row
 	iris_dict = dict(zip(headers, iris)) # matches each header item to a value in a given row using zip(), converts to a dictionary
 
-	irises.append(iris_dict)
+	irises.append( iris_dict )
 
+
+
+
+
+
+# ---------------------------------------------------------------------------- #
+#*                                   EXERCISES                                  #
+# ---------------------------------------------------------------------------- #
+
+## 1) Rewrite the following code using a context manager:
+    # f = open("hello_world.txt", "w")
+    # f.write("Hello, World!")
+    # f.close()
+
+with open( "hello_world.txt", mode="w" ) as f:
+    f.write( "Hello, world!" )
+    
