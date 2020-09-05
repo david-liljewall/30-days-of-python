@@ -1,0 +1,2 @@
+Welcome to the world, write_example.txt!
+Now you have two lines! You're growing up so fast!
