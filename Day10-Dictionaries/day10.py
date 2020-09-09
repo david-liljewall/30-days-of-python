@@ -113,9 +113,8 @@ for value in movie.values():
 # to print keys:
 for key, value in movie.items():
     print( f"{key}: {value}" )
-    
-    
-    
+
+
 
 # ---------------------------------------------------------------------------- #
 #*                                   EXERCISES                                  #
