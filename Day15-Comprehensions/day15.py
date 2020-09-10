@@ -5,6 +5,13 @@
 ## Comprehensions allow us to create a collection from some other iterable in a very succint way.
 
 
+
+##* NOTE:
+    # Syntax: [ f(x) for x in nums if g(x) ]
+    # i.e. numes = [1,2,3,4]
+    # result_list = [ x**2 for x in nums if ( x % 2 == 0 ) ] --> if even, square
+
+
 #* ---------------------------- List Comprehensions --------------------------- #
 
 ## Used to create a new list from some other iterable - another list, a zip object, etc.
