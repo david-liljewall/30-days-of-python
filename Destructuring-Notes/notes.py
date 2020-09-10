@@ -1,6 +1,5 @@
 
-
-##* Destructuring in standard variable assignments
+#* -------------------- Standard Destructuring Assignments -------------------- #
 
 # Assign two variables :
 x, y = ( 1, 2 )
@@ -13,3 +12,10 @@ print(f"x = {x}, y = {y}")
 
 
 
+#* ------------------------ Destructuring in for loops ------------------------ #
+
+example_list = ["A", "B", "C"]
+
+for counter, letter in enumerate( example_list ):
+    print( f"{counter}: {letter}" )
+    
