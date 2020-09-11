@@ -147,6 +147,7 @@ country = {
 def print_country( country ):
     print( "{name} has a population of {population}, capital is {capital}, and the currency is the {currency}".format( **country ) )
     
+    
 print_country( country )
 
 ## 4) Using * unpacking and range, print the numbers 1 to 20, separated by commas. You will have to provide an argument for print function's sep parameter for this exercise.
