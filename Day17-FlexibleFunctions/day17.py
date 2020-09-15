@@ -146,7 +146,7 @@ country = {
 
 def print_country( country ):
     print( "{name} has a population of {population}, capital is {capital}, and the currency is the {currency}".format( **country ) )
-    
+
     
 print_country( country )
 
