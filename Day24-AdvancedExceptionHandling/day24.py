@@ -5,7 +5,7 @@
 
 
 #* LookupError 
-    # Used any time a key or index is not found (KeyError, IndexError)
+	# Used any time a key or index is not found (KeyError, IndexError)
 numbers = [1, 2, 3, 4, 5]
 
 try:
@@ -15,8 +15,8 @@ except IndexError:
 except LookupError:
 	print("Could not retrieve that value.")
  
-    # NOTE: Useful exception to handle when working with sequences and mapping types like dictionaries. Is a good fallback if we don't catch specific exceptions
-    
+	# NOTE: Useful exception to handle when working with sequences and mapping types like dictionaries. Is a good fallback if we don't catch specific exceptions
+	
 person = {
 	"name": "Phil",
 	"city": "Budapest"
@@ -113,15 +113,37 @@ print( "\n\n" ) # extra whitespace
 user_input = int( input( "Enter an integer between 1 and 10: " ) )
 
 if user_input not in range( 1, 11 ):
-    raise ValueError( f"Your entry of {user_input} is outside the range!" )
+	raise ValueError( f"Your entry of {user_input} is outside the range!" )
 
 
 ## 2) Below you'll find a divide function. Write exception handling so that we catch ZeroDivisionError exceptions, TypeError exceptions, and other kinds of ArithmeticError.
 
 def divide( a, b ):
+	try:
+		print( a / b )
+	except ZeroDivisionError:
+		print( f"You entered {b} for b, and the universe explodes!" )
+	except TypeError:
+		print( f"You entered " )
+		
+		
+## 3) Below you'll find an itemgetter function that takes in a collection, and either a key or index. Catch any instances of KeyError or IndexError, and write the exception to a file called log.txt, along with the arguments that caused this issue. Once you have written to the log file, reraise the original exception.
+
+def log_exception(exception, fn, **kwargs):
+    values = ", ".join( f"{key}={value!r}" for key, value in kwargs.items() )
+		
+
+def itemgetter(collection, identifier):
     try:
-        print( a / b )
-    except ZeroDivisionError:
-        print( f"You entered {b} for b, and the universe explodes!" )
-    except TypeError:
-        print( f"You entered " )
+        return collection[ identifier ]
+    except ( IndexError, KeyError, TypeError ) as ex:
+        log_exception( ex, "itemgetter", collection=collection, identifier=identifier )
+        raise
+    
+test_dictionary = { "key1": 1, "key2": 2 }
+
+# IndexError Test:
+test_dictionary[ "key1" ]
+
+# KeyError Test:
+test_dictionary[ "key3" ]
