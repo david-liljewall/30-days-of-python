@@ -54,7 +54,7 @@ print( irises )
 from functools import partial
 
 def exponentiate( base, exponent ):
-    return base ** exponent
+	return base ** exponent
 
 # Create square function that squares the base
 square = partial( exponentiate, exponent=2 )

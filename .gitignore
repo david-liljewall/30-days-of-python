@@ -1,3 +1,5 @@
 # For python files, ignore the __pycache__ folder
 
 __pycache__
+
+.idea
