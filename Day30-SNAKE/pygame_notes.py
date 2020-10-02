@@ -179,8 +179,12 @@ clock = pygame.time.Clock()
 screen = pygame.display.set_mode([640, 480])
 
 
+
+# MAIN GAME function
 def main():
     ball_position = [(screen.get_width() // 2), (screen.get_height() // 2)]
+        # The "//" operator takes the floor of the division, i.e., 3//2 = 1, 3/2 = 1.5
+        
     ball_velocity = [randint(-5, 5), randint(-5, 5)]
     
     while True:
@@ -196,7 +200,7 @@ def main():
         if ball_position[ 0 ] - BALL_RADIUS < 0:
             ball_velocity[ 0 ] = -ball_velocity[ 0 ]
         elif ball_position[ 0 ] + BALL_RADIUS > screen.get_width():
-            ball_velocity = - ball_velocity[ 0 ]
+            ball_velocity[ 0 ] = - ball_velocity[ 0 ]
 
         # Check for top and bottom collisions
         if ball_position[ 1 ] - BALL_RADIUS < 0:
@@ -210,6 +214,6 @@ def main():
         
         clock.tick(60)
 
-pygame.display.update()
+
 
 main()
