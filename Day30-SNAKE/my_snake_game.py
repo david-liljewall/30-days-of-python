@@ -147,20 +147,18 @@ def snake_direction( event:pygame.event, current_direction: str ):
 def endScreen( player_score: int ):
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.QUIT or event.type == pygame.MOUSEBUTTONDOWN:
+                return False
+            elif event.type == pygame.KEYDOWN:
                 play()
-                # NOTE: Add functionality to let user replay the game!
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                return False
-            if event.type == pygame.QUIT:
-                return False
+            
 
         
         screen.fill( BACKGROUND_COLOR )
         
         render_score( player_score, "Final Score: ", SNAKE_COLOR )
         
-        play_again = font.render( "Play again? (keypress=y, mouseclick=n)", True, TEXT_COLOR )
+        play_again = font.render( "Play again? (keypress=y, double-click=n)", True, TEXT_COLOR )
         screen.blit( play_again, ( 5, 200 ) )
         
         pygame.display.update()
