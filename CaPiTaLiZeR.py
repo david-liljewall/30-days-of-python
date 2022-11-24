@@ -52,7 +52,8 @@ def alt_capitalizer():
 user_input = input("Enter text from someone that you'd like to mock: ")
 
 option = input(
-    "Enter 'r' for random capitalization or 'a' for alternating capitalization, or 'b' for both: ")
+    "Enter 'r' for random capitalization or 'a' for alternating capitalization, or 'b' for both: "
+)
 
 print("\n\n")  # extra whitespace
 
